@@ -10,7 +10,7 @@ and open the template in the editor.
         <title>PHP pinzado</title>
     </head>
     <body>
-        <div></div>
+        <div><a href="asignaturas.php">Consulta las asignaturas</a></div>
         <?php
         // put your code here
         ?>
