@@ -1,3 +1,6 @@
+
+
+<div><a href="formulario_asignaturas.php">Agregar asignaturas</a></div>
 <?php
 
 /* 
@@ -41,7 +44,7 @@ $bd = conectaBd();
         foreach ($resultado as $registro){
             echo "<tr>";
             echo "<td>";
-            echo $registro['modulo'];
+            echo $registro['asignatura'];
             echo "</td>";
             echo "<td>";
             echo $registro['profesor'];
@@ -55,3 +58,4 @@ $bd = conectaBd();
         }
               
         $bd = null;
+?>
