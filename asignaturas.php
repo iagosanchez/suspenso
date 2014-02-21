@@ -34,16 +34,20 @@ $bd = conectaBd();
         } else {
             echo "<table border='1'>";
             echo "<tr>";
-            echo "<th>Titulo</th>";
-            echo "<th>url</th>";
+            echo "<th>Modulo</th>";
+            echo "<th>Profesor</th>";
+            echo "<th>Nota</th>";
             echo "</tr>";
         foreach ($resultado as $registro){
             echo "<tr>";
             echo "<td>";
-            echo $registro['titulo'];
+            echo $registro['modulo'];
             echo "</td>";
             echo "<td>";
-            echo $registro['url'];
+            echo $registro['profesor'];
+            echo "</td>";
+            echo "<td>";
+            echo $registro['nota'];
             echo "</td>";
             echo "</tr>";
                 }
