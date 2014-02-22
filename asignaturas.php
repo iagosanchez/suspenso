@@ -1,34 +1,21 @@
+<?php
+require_once 'funciones_asignaturas.php';
+?>
 
-
-<div><a href="formulario_asignaturas.php">Agregar asignaturas</a></div>
+<html>
+    <head>
+        <title>Favoritos</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <div>Listado de asignaturas</div>
+        <div><a href="formulario_asignaturas.php">Agregar asignaturas</a></div>
 <?php
 
-/* 
- * To change this license header, choose License Headers in Project Properties.
- * To change this template file, choose Tools | Templates
- * and open the template in the editor.
+/**
+ * CONSULTAR ASIGNATURAS DE BD
  */
-//CONECTARSE A BD
-define('BD_USUARIO', 'root');
-define('BD_PASSWORD', 'abc123.');
-define('BD_NOME', 'asignaturas');
-define('BD_CONEX_PDO', 'mysql:host=localhost;dbname='.BD_NOME);
-
-function conectaBd()
-{
-    try {
-        //$db = new PDO("mysql:host=localhost", "root", "abc123.");
-        $bd = new PDO(BD_CONEX_PDO, BD_USUARIO, BD_PASSWORD);
-        return($bd);
-    } catch (PDOException $e) {
-        print "<p>Error: No puede conectarse con la base de datos.</p>\n";
-        print "<p>Error: " . $e->getMessage() . "</p>\n";
-        exit();
-    }
-}
-
-//CONSULTAR ASIGNATURAS DE BD
-
 $bd = conectaBd();
         $consulta = 'SELECT * FROM asignaturas';
         $resultado = $bd ->query($consulta);
@@ -59,3 +46,5 @@ $bd = conectaBd();
               
         $bd = null;
 ?>
+    </body>
+</html>
