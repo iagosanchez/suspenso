@@ -32,14 +32,20 @@ function conectaBd()
 
 
 function validarAsignatura ($valor){
-    return true;
-}
+   if (strlen($valor)>0 && strlen($valor)<=50){
+        return TRUE;
+    } else {
+        return FALSE;
+    }
+} 
 function validarProfesor ($valor){
-    return true;
+    if (strlen($valor)>0 && strlen($valor)<=20){
+        return TRUE;
+    } else {
+        return FALSE;
+    }
 }
-
 function validarNota ($valor){
     return true;
 }
-
 ?>

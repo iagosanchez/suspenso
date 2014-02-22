@@ -47,8 +47,24 @@ $_SESSION['hayErrores'] = (isset ($_SESSION['hayErrores']))?
                     echo "<div class 'error'>".MSG_ERR_NOTA."</div>";
                 }
                ?>
-                        
-            <p><input type="submit" value="Agregar"/></p>
+                
+             <?php
+             /**
+            ALTERNATIVA A LOS MENSAJES DE ERROR CON UN FOR
+             for($i=0; $i<=2;$i++)
+                { if($errores[$i]){
+                        if($i == 0){
+                            echo "<div class 'error'>".MSG_ERR_ASIGNATURA."</div>";
+                        }elseif ($i ==1) {
+                            echo "<div class 'error'>".MSG_ERR_PROFESOR."</div>";
+                        }else {
+                            echo "<div class 'error'>".MSG_ERR_NOTA."</div>";
+                        }
+                    }
+                }
+             **/
+             ?>
+             <p><input type="submit" value="Agregar"/></p>
         </form>
     </body>
 </html>
