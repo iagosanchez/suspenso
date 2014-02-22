@@ -12,9 +12,6 @@ define('BD_PASSWORD', 'abc123.');
 define('BD_NOME', 'asignaturas');
 define('BD_CONEX_PDO', 'mysql:host=localhost;dbname='.BD_NOME);
 
-define('MIN_NOTA', '0');
-define('MAX_NOTA', '10');
-
 // conectarse a una bd
 function conectaBd()
 {
