@@ -12,6 +12,10 @@ define('BD_PASSWORD', 'abc123.');
 define('BD_NOME', 'asignaturas');
 define('BD_CONEX_PDO', 'mysql:host=localhost;dbname='.BD_NOME);
 
+define('MSG_ERR_ASIGNATURA', "Error en la asignatura");
+define('MSG_ERR_PROFESOR', "Error en el profesor");
+define('MSG_ERR_NOTA', "Error en la nota");
+
 // conectarse a una bd
 function conectaBd()
 {
