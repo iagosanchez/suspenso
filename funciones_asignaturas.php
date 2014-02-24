@@ -46,6 +46,11 @@ function validarProfesor ($valor){
     }
 }
 function validarNota ($valor){
+    if (is_numeric($valor)
+            && ($valor>=0 && $valor<=10)) {
     return true;
+            }else {
+                return FALSE;
+            }
 }
 ?>
