@@ -16,20 +16,20 @@ $_SESSION['hayErrores'] = (isset ($_SESSION['hayErrores']))?
 /*
  * Cargar de la base de datos
  */
-//$_SESSION['asignatura'] = (isset ($_REQUEST['asignatura']))?
-  //      $_REQUEST['asignatura']:$_SESSION['asignatura'];
+$_SESSION['asignatura'] = (isset ($_REQUEST['asignatura']))?
+      $_REQUEST['asignatura']:$_SESSION['asignatura'];
 
 $bd = conectaBd();
-$consulta = "SELECT * FROM software WHERE asignatura=".$_SESSION['asignatura'];
+$consulta = "SELECT * FROM asignaturas WHERE asignatura='".$_SESSION['asignatura']."'";
 $resultado = $bd ->query($consulta);
 if (!$resultado){
     $url = "error.php?msg_error=error_Consulta_Editar";
-    header('Location:', $url);
+     header('Location:', $url);
 } else {
        $registro = $resultado->fetch();
        if(!$registro) {
            $url = "error.php?msg_error=Error_Registro_Software_inexistente";
-           header('Location:'.$url);
+            header('Location:'.$url);
        } else {
            $_SESSION['datos'][0] = $registro['asignatura'];
            $_SESSION['datos'][1] = $registro['profesor'];
