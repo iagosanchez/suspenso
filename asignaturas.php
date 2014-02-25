@@ -27,6 +27,7 @@ $bd = conectaBd();
             echo "<th>Modulo</th>";
             echo "<th>Profesor</th>";
             echo "<th>Nota</th>";
+            echo "<th></th><th></th>";
             echo "</tr>";
         foreach ($resultado as $registro){
             echo "<tr>";
@@ -39,6 +40,10 @@ $bd = conectaBd();
             echo "<td>";
             echo $registro['nota'];
             echo "</td>";
+            $irEditar = "editar_asignaturas.php?asignatura=".$registro['asignatura'];
+            echo "<td><a href=".$irEditar.">Editar</a></td>";
+            $irBorrar = "confirmar_eliminar_asignaturas.php?asignatura=".$registro['asignatura'];
+            echo "<td><a href=".$irBorrar.">Eliminar</a></td>";
             echo "</tr>";
                 }
                     echo "</table>";

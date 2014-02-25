@@ -1,7 +1,6 @@
 <?php
 session_start();
-require_once 'funciones_bd.php';
-require_once 'funciones.php';
+require_once 'funciones_asignaturas.php';
 /* 
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -17,8 +16,8 @@ $_SESSION['hayErrores'] = (isset ($_SESSION['hayErrores']))?
 /*
  * Cargar de la base de datos
  */
-$_SESSION['asignatura'] = (isset ($_REQUEST['asignatura']))?
-        $_REQUEST['asignatura']:$_SESSION['asignatura'];
+//$_SESSION['asignatura'] = (isset ($_REQUEST['asignatura']))?
+  //      $_REQUEST['asignatura']:$_SESSION['asignatura'];
 
 $bd = conectaBd();
 $consulta = "SELECT * FROM software WHERE asignatura=".$_SESSION['asignatura'];
