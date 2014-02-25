@@ -34,7 +34,8 @@ if (!$resultado){
        } else {
            $_SESSION['datos'][0] = $registro['asignatura'];
            $_SESSION['datos'][1] = $registro['profesor'];
-           $_SESSION['datos'][2] = $registro['nota']
+           $_SESSION['datos'][2] = $registro['nota'];
+       
        }
 }
 ?>
