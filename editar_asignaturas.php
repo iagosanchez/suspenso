@@ -46,9 +46,9 @@ if (!$resultado){
         <meta name="viewport" content="width=device-width">
     </head>
     <body>
-        <div>TODO write content</div>
-        <form action="grabar_editar_asginaturas.php" method="GET">
-            <div>Titulo: <input type="text" name="asignatura" value="<?php echo $_SESSION['datos'][0]; ?>" /></div>
+        <div>Editar asignatura</div>
+        <form action="grabar_editar_asignaturas.php" method="GET">
+            <div>Asignatura: <input type="text" name="asignatura" value="<?php echo $_SESSION['datos'][0]; ?>" /></div>
             <?php
                 if ($_SESSION['errores'][0]) {
                     echo "<div class 'error'>".MSG_ERR_ASIGNATURA."</div>";
@@ -56,13 +56,13 @@ if (!$resultado){
             ?>
             
             
-            <div>Url <input type="text" name="profesor" value="<?php echo $_SESSION['datos'][1]; ?>" /></div>
+            <div>Profesor: <input type="text" name="profesor" value="<?php echo $_SESSION['datos'][1]; ?>" /></div>
             <?php
                 if ($_SESSION['errores'][1]) {
                     echo "<div class 'error'>".MSG_ERR_PROFESOR."</div>";
                 }
             ?>
-              <div>Url <input type="text" name="nota" value="<?php echo $_SESSION['datos'][2]; ?>" /></div>
+              <div>Nota: <input type="text" name="nota" value="<?php echo $_SESSION['datos'][2]; ?>" /></div>
             <?php
                 if ($_SESSION['errores'][2]) {
                     echo "<div class 'error'>".MSG_ERR_NOTA."</div>";
