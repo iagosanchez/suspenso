@@ -42,7 +42,7 @@ $bd = conectaBd();
             echo "</td>";
             $irEditar = "editar_asignaturas.php?asignatura=".$registro['asignatura'];
             echo "<td><a href=".$irEditar.">Editar</a></td>";
-            $irBorrar = "confirmar_eliminar_asignaturas.php?asignatura=".$registro['asignatura'];
+            $irBorrar = "confirmar_borrar_asignaturas.php?asignatura=".$registro['asignatura'];
             echo "<td><a href=".$irBorrar.">Eliminar</a></td>";
             echo "</tr>";
                 }
